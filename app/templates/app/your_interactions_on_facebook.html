@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>your_interactions_on_facebook</title>
+</head>
+<body>
+
+
+<h3>Facebook Watch videos and shows</h3>
+<h5>Videos and shows you've recently visited or viewed from Facebook Watch and time you've spent watching shows</h5>
+
+<div class="recently_viewed">
+
+    <table>
+        <tr>
+            <td>Time</td>
+            <td>Name</td>
+            <td>uri</td>
+        </tr>
+        {% for i in allData1 %}
+        <tr>
+            <td>{{i.timestamp}}</td>
+            <td>{{i.sub_name}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+
+<h3>Facebook Live videos</h3>
+<h5>Live videos you've recently watched</h5>
+
+
+<div class="recently_viewed">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData2 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Posts that have been shown to you in your News Feed</h3>
+<h5>Posts that have been shown to you in your News Feed in the last 90 days.</h5>
+<div class="recently_viewed">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData3 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Videos you've watched</h3>
+<h5>Videos you've watched in the last 90 days.</h5>
+<div class="recently_viewed">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData4 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Web pages you've visited off Facebook</h3>
+<h5>Web pages you've visited off Facebook in the last 90 days.</h5>
+<div class="recently_viewed">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData5 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Marketplace interactions</h3>
+<h5>Your recent interactions on Marketplace</h5>
+<div class="recently_viewed">
+    <h5>Marketplace item details</h5>
+    <h6>Dates you've viewed the details of an item</h6>
+    <table>
+        <tr>
+            <td>Date</td>
+        </tr>
+        {% for i in spl_sub_val1 %}
+        <tr>
+            <td>{{i}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+    <h5>Marketplace shown to you</h5>
+    <h6>Dates when the Marketplace tab was shown to you on Facebook</h6>
+    <table>
+        <tr>
+            <td>Date</td>
+        </tr>
+        {% for i in spl_sub_val2 %}
+        <tr>
+            <td>{{i}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+    <h5>Marketplace items</h5>
+    <h6>Items you've viewed in Marketplace</h6>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData6 %}
+        <tr>
+            <td>{{i.spl_sub_val_a}}</td>
+            <td><a href="{{i.spl_sub_val_b}}" target="_blank">{{i.spl_sub_val_b}}</a></td>
+        </tr>
+        {% endfor %}
+
+
+    </table>
+
+
+</div>
+
+
+<h3>Ads</h3>
+<h5>Ads you've recently viewed</h5>
+<div class="recently_viewed">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData2 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Profile visits</h3>
+<h5>People whose profiles you've visited</h5>
+<div class="recently_visited">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData11 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Page visits</h3>
+<h5>Pages you've visited</h5>
+<div class="recently_visited">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData22 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Events visited</h3>
+<h5>Event pages you've visited</h5>
+<div class="recently_visited">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData33 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Groups visited</h3>
+<h5>Groups you've recently visited</h5>
+<div class="recently_visited">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Url</td>
+        </tr>
+        {% for i in allData44 %}
+        <tr>
+            <td>{{i.sub_name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td><a href="{{i.uri}}" target="_blank">{{i.uri}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<h3>Marketplace visits</h3>
+<h5>Dates you've visited Marketplace</h5>
+<div class="recently_visited">
+    <table>
+        {% for i in spl_sub_val1 %}
+        <tr>
+            <td>{{i}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>facebook_gaming</title>
+</head>
+<body>
+
+<h1>Facebook games</h1>
+<div class="page_likes">
+        <table>
+        <tr>
+            <td>Name</td>
+            <td>when added</td>
+            <td>what time added</td>
+            <td>Category</td>
+        </tr>
+        {% for i in allData1 %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.added_date}}</td>
+            <td>{{i.added_time}}</td>
+            <td>{{i.category}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

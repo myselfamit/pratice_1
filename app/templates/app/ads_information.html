@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ads information</title>
+</head>
+<body>
+
+<h1>represents all the information regarding ads and related information</h1>
+
+<div class="advertisers_using_your_activity_or_information">
+    <table>
+        <tr>
+            <td>Advertiser name</td>
+        </tr>
+        {% for i in df_1.advertiser_name %}
+        <tr>
+            <td>{{i}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="advertisers_you've_interacted_with">
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>Data</td>
+            <td>time</td>
+        </tr>
+        {% for i in allData2 %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="information_you've_submitted_to_advertisers">
+    <table>
+        {% for i in allData3 %}
+        <tr>
+            <td>{{i.label}}</td>
+            <td>{{i.value}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

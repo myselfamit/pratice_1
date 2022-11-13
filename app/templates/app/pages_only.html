@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pages_only</title>
+</head>
+<body>
+
+<h1>Pages liked</h1>
+<div class="page_likes">
+        <table>
+        <tr>
+            <td>Name</td>
+            <td>Date</td>
+            <td>time</td>
+        </tr>
+        {% for i in allData1 %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<h1>pages_unfollowed_v2</h1>
+<div class="pages_unfollowed">
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>Date</td>
+            <td>time</td>
+        </tr>
+        {% for i in allData2 %}
+        <tr>
+            <td>{{i.title}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<h1>pages_followed_v2</h1>
+<div class="pages_followed">
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>Date</td>
+            <td>time</td>
+        </tr>
+        {% for i in allData3 %}
+        <tr>
+            <td>{{i.title}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+</body>
+</html>
